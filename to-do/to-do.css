@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: rgb(45, 44, 44);
+    color: white;
+}
+header{
+    max-width: 800px;
+    padding: 2rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+header h1{
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+input, button{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+#new-task-form{
+    
+    display: flex;
+    gap: var(--gap,1.3rem);
+}
+#new-task-input{
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    width: 400px;
+    font-size: 1.2rem;
+    box-shadow: ;
+}
+#new-task-submit{
+    color: white;
+    font-weight: 700;
+    background-image: linear-gradient(to right top, #b834ff, #cc2dfb, #de24f7, #ef19f3, #ff08ee);
+    font-size: 1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#new-task-submit:hover{
+    opacity: 0.8;
+}
+#new-task-submit:active{
+    opacity: 0.6;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.task-list h2{
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+#tasks{
+    transition: 2s;
+}
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-radius: .8rem;
+    padding: .8rem 1.2rem;
+    margin-bottom: 1.5rem;
+    
+}
+#tasks .task .content{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+#tasks .task .content .text{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 100%;
+}
+#tasks .task .content .text:not(:read-only){
+    color: rgb(174, 0, 255);
+}
+#tasks .task .actions{
+    display: flex;
+}
+#tasks .task .actions .edit{
+    color: white;
+    background-image: linear-gradient(to right top, #b834ff, #cc2dfb, #de24f7, #ef19f3, #ff08ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#tasks .task .actions .delete{
+    color: white;
+    background-image: linear-gradient(to right top, #df233c, #e41a4b, #e8125a, #ea0e6a, #eb127a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#tasks .task .actions .edit:hover{
+    opacity: 0.8;
+}
+#tasks .task .actions .edit:active{
+    opacity: 0.6;
+}
+#tasks .task .actions .delete:hover{
+    opacity: 0.8;
+}
+#tasks .task .actions .delete:active{
+    opacity: 0.6;
+}
+
